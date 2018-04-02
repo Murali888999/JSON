@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>NESTDE ARRAYS IN JSON OBJECTS</h2>
+    <p id="array"></p>
+    <script>
+        var i,j,x="";
+        var data = {
+            "name": "Murali", "age": "23", "Exams": [{ "name": "SSLC", "typeofExams": ["unit test", "half yearly", "grand test"] },
+                                               { "name": "B.TECH", "typeofExams": [ "1sem", "2sem", "3rd sem", "4th sem"] }]
+        }
+        for(i in data.Exams)
+        {
+            x += "<h2>" + data.Exams[i].name + "</h2>";
+            for(j in data.Exams[i].typeofExams)
+            {
+                x += data.Exams[i].typeofExams[j] + "<br/>";
+            }
+        }
+        document.getElementById("array").innerHTML = x;
+                                                     
+    </script>
+</body>
+</html>

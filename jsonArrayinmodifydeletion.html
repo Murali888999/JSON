@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>update delete the JSON Array elements</h2>
+    <p id="test"></p>
+    <script>
+        var i, k = "";
+        var data = { "cars": ["bmw", "scorpio", "benz"] }
+        data.cars[0] = "range rover";
+        for(i in data.cars)
+        {
+            k += data.cars[i] + "<br/>";
+        }
+        document.getElementById("test").innerHTML = k;
+
+        delete data.cars[1];
+        for (i in data.cars) {
+            k += data.cars[i] + "<br/>";
+        }
+        document.getElementById("test").innerHTML = k;
+    </script>
+</body>
+</html>

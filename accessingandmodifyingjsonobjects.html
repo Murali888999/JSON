@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>accessing and modifying nested json objects</h2>
+    <p id="nest"></p>
+    <script>
+        var dat,x="";
+      data = { "name": "Murali", "age": "23", "bikes": { "bike1": "apache", "bike2": "enfield", "bike3": "splendor" } }
+        document.getElementById("nest").innerHTML += data.bikes.bike1 + "<br/>" + data.bikes.bike2 + "<br/>" + data.bikes.bike3;
+        data.bikes.bike3 = "pulsar";
+
+        for(b in data.bikes)
+        {
+            x += data.bikes[b] + "<br/>";
+        }
+        document.getElementById("nest").innerHTML = x;
+
+        delete data.bikes.bike3;
+
+        for (b in data.bikes) {
+          x += data.bikes[b] + "<br/>" ;
+        }
+        document.getElementById("nest").innerHTML = x;
+    </script>
+</body>
+</html>

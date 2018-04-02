@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <h2>CREATE OBJECT FORM JSON STRING</h2>
+    <p id="obj"></p>
+    <script>
+        var data = JSON.parse('{ "name":"pawan", "age":40, "city":"Amaravathi"}');
+        document.getElementById("obj").innerHTML = data.name + ", " + data.age;
+    </script>
+</body>
+</html>

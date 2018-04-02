@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>accessing all properties into json object</h2>
+    <p id="loop"></p>
+    <script>
+        var data = { "name": "madhu", "age": "23", "sex": "male" }
+        for(y in data)
+        {
+            document.getElementById("loop").innerHTML += y + "<br/>";
+        }
+    </script>
+</body>
+</html>
